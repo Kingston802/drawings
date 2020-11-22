@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+}
+#menu {
+  background-color: rgba(0,0,255,.4);
+  width: 50px;
+  height: 50px;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  margin: 0 auto; 
+}
+#inner{
+  border: white solid 2px; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: calc(0.25em - 2px);
+  left: 0;
+  right: 0;
+  margin: 0 auto; 
+}
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
+.open {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.option {
+  background-color: rgba(0,0,255,.4);
+  width: 50px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto; 
+  transition: visibility 0.3s, opacity 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.option svg {
+  color: white;
+  fill: white;
+}
+[data-key='1'] {
+  bottom: 1em;
+  right: calc(4em + 40px);
+}
+[data-key='2'] {
+  bottom: calc(2em + 40px);
+}
+[data-key='3'] {
+  bottom: 1em;
+  left: calc(4em + 40px);
+}
