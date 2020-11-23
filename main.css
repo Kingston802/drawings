@@ -1,3 +1,6 @@
+:root {
+  --currentColour: #000000;
+}
 html, body {
   margin: 0;
   overflow: hidden;
@@ -54,4 +57,35 @@ html, body {
 [data-key='3'] {
   bottom: 1em;
   left: calc(4em + 40px);
+}
+
+.pulse {
+box-shadow: 0 0 0 var(--currentColour);
+animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+0% {
+-webkit-box-shadow: 0 0 0 0 var(--currentColour);
+}
+70% {
+-webkit-box-shadow: 0 0 0 5px var(--currentColour);
+}
+100% {
+-webkit-box-shadow: 0 0 0 0 var(--currentColour);
+}
+}
+@keyframes pulse {
+0% {
+-moz-box-shadow: 0 0 0 0 var(--currentColour);
+box-shadow: 0 0 0 0 var(--currentColour);
+}
+70% {
+-moz-box-shadow: 0 0 0 10px var(--currentColour);
+box-shadow: 0 0 0 5px var(--currentColour);
+}
+100% {
+-moz-box-shadow: 0 0 0 0 var(--currentColour);
+box-shadow: 0 0 0 0 var(--currentColour);
+}
 }

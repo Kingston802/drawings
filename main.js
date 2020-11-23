@@ -59,12 +59,15 @@ const colour = document.querySelector("[data-key='2']");
 colours = ['#000000', '#FF0000', '#00FF00', '#0000FF'];
 let currentColour = 0;
 colour.addEventListener('click', () => {
-  // add some way to indicate the changes in colour 
   currentColour++;
   if (currentColour >= colours.length) {
     currentColour = 0;
   }
   ctx.strokeStyle = colours[currentColour];
+
+  colour.style.setProperty(`--currentColour`, colours[currentColour]);
+  colour.classList.add('pulse');
+  setTimeout(() => { colour.classList.remove('pulse'); }, 1000) 
 });
 
 const size = document.querySelector("[data-key='1']");
