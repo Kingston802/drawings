@@ -8,6 +8,10 @@ window.addEventListener('resize', (e) => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   ctx.putImageData(data,0,0);
+
+  // fixes bug where line join changes after resize
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
 });
 
 ctx.strokeStyle = '#000000';
@@ -54,9 +58,6 @@ camera.addEventListener('click', () => {
   link.download = 'drawing.png';
   link.href = canvas.toDataURL()
   link.click();
-  // I think this fixes bug where line join changes 
-  ctx.lineJoin = 'round';
-  ctx.lineCap = 'round';
 });
 
 // change colour between list of set colours 
