@@ -53,6 +53,9 @@ camera.addEventListener('click', () => {
   link.download = 'drawing.png';
   link.href = canvas.toDataURL()
   link.click();
+  // I think this fixes bug where line join changes 
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
 });
 
 const colour = document.querySelector("[data-key='2']");
