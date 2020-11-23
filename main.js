@@ -47,7 +47,7 @@ canvas.addEventListener('touchstart', (e) => {
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 canvas.addEventListener('mouseup', () => {isDrawing=false});
-canvas.addEventListener('touchend', () => {isDrawing=false});
+canvas.addEventListener('touchend', () => {isDrawing=false; });
 canvas.addEventListener('mouseout', () => {isDrawing=false});
 canvas.addEventListener('touchcancel', () => {isDrawing=false});
 

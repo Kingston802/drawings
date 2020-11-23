@@ -49,13 +49,21 @@ html, body {
 }
 [data-key='1'] {
   bottom: 1em;
+  right: 3.6em;
+  right: -webkit-calc(4em + 40px);
+  right: -moz-calc(4em + 40px);
   right: calc(4em + 40px);
 }
 [data-key='2'] {
+  bottom: -webkit-calc(2em + 40px);
+  bottom: -moz-calc(2em + 40px);
   bottom: calc(2em + 40px);
 }
 [data-key='3'] {
   bottom: 1em;
+  left: 3.6em;
+  left: -webkit-calc(4em + 40px);
+  left: -moz-calc(4em + 40px);
   left: calc(4em + 40px);
 }
 
