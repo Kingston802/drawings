@@ -68,7 +68,8 @@ colour.addEventListener('click', () => {
   }
   ctx.strokeStyle = colours[currentColour];
 
-  colour.style.setProperty(`--currentColour`, colours[currentColour]);
+  // adds 40% transparency to current colour 
+  colour.style.setProperty(`--currentColour`, colours[currentColour]+'66');
   colour.classList.add('pulse');
   setTimeout(() => { colour.classList.remove('pulse'); }, 1000) 
 });
