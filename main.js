@@ -21,8 +21,8 @@ let lastY = 0;
 
 function draw(e) {
   if(!isDrawing) return;
-  console.log(e);
 
+  // draw line from last position to new position
   ctx.beginPath()
 
   ctx.moveTo(lastX, lastY);
@@ -47,6 +47,7 @@ menu.addEventListener('click', () => {
   optionsArr.map(option => option.classList.toggle("open"));
 });
 
+// save drawing to local fs 
 const camera = document.querySelector("[data-key='3']");
 camera.addEventListener('click', () => {
   var link = document.createElement('a');
@@ -58,6 +59,7 @@ camera.addEventListener('click', () => {
   ctx.lineCap = 'round';
 });
 
+// change colour between list of set colours 
 const colour = document.querySelector("[data-key='2']");
 colours = ['#000000', '#FF0000', '#00FF00', '#0000FF'];
 let currentColour = 0;
@@ -74,6 +76,7 @@ colour.addEventListener('click', () => {
   setTimeout(() => { colour.classList.remove('pulse'); }, 1000) 
 });
 
+// change size between some set sizes 10-100
 const size = document.querySelector("[data-key='1']");
 const maxSize = 100;
 let currentSize = 0;
